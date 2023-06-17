@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1023227695692",
+    "firebase_url": "https://android-prac-493d0-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "android-prac-493d0",
+    "storage_bucket": "android-prac-493d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023227695692:android:57b9cc28f5c287bab75ae9",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023227695692-f93obcol13s6gfu99l2ddc67vbj47b45.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArPfAUBvmdQhIcoHh9dAdVqK06ZsKFTMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023227695692-f93obcol13s6gfu99l2ddc67vbj47b45.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
