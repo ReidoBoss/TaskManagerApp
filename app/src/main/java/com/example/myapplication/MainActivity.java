@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -48,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         button = (Button) findViewById(R.id.button);
         buttonRegT = (Button) findViewById(R.id.buttonReg);
         errMsg = (TextView) findViewById(R.id.errMsg);
-        Intent intent = new Intent(this, WelcomeActivity.class);
+        Intent intent = new Intent(this, Home.class);
 
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
                         if(!Objects.isNull(uname)){
                             if(upass.equals(pasStrVal)){
                                 intent.putExtra("editTextValue", "Welcome "+firstname+" "+lastname);
+                                intent.putExtra("username", uname);
+
                                 startActivity(intent);
                             }else{
                                 errMsg.setText("Invalid Password");
@@ -107,12 +108,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void successLogin(){
-        Intent intent = new Intent(this, WelcomeActivity.class);
+        Intent intent = new Intent(this, Home.class);
         intent.putExtra("editTextValue", "hello");
         startActivity(intent);
     }
     public void register(){
-        Intent intent = new Intent(this, MainActivity2.class);
+        Intent intent = new Intent(this, Register.class);
         startActivity(intent);
     }
 }

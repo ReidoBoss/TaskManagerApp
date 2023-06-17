@@ -8,11 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.myapplication.databinding.ActivityMainBinding;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class MainActivity2 extends AppCompatActivity {
+public class Register extends AppCompatActivity {
 
     private DatabaseReference mDatabase;
     private EditText fname,lname,username,password;
@@ -22,7 +21,7 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_register);
 
         fname = findViewById(R.id.firstname);
         lname = findViewById(R.id.lastname);
@@ -49,7 +48,7 @@ public class MainActivity2 extends AppCompatActivity {
         Users user = new Users( fname.getText().toString(),
                                 lname.getText().toString(),
                                 username.getText().toString(),
-                                password.getText().toString());
+                                password.getText().toString(),1);
 
         mDatabase.child("users").child(user.getUsername()).setValue(user);
         openact1();
